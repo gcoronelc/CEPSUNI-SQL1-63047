@@ -1,4 +1,4 @@
-![IMPLEMENTACION DE BASE DE DATOS SQL SERVER](https://raw.githubusercontent.com/gcoronelc/CEPSUNI-CPP-55797/main/img/portada.png)
+![IMPLEMENTACION DE BASE DE DATOS SQL SERVER](https://raw.githubusercontent.com/gcoronelc/CEPSUNI-SQL1-63047/main/img/portada.png)
 
 # DATOS GENERALES
 

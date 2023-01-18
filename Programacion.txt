@@ -12,3 +12,14 @@ Clase 8 13.FEB.23: Examen Final
 NOTA
 -------------------------------------------------
 Las practicas son sincronas en hora de clase
+
+
+
+SISTEMA DE CALIFICACIÓN
+-------------------------------------------------
+- 4 Practicas Calificadas
+- 1 Examen Final
+
+
+PP = ( pc1 + pc2 + pc3 + pc4 - MenorPC ) / 3
+PF = ( PP + EF ) / 2
