@@ -35,4 +35,18 @@ values(1000,'refrigeradora',3400,4500,100);
 go
 
 
+-- Para insertar valores en una columna IDENTITY se debe habiliar
+-- con SET IDENTITY_INSERT
 
+SET IDENTITY_INSERT maestros.articulo ON;  
+GO  
+
+insert into maestros.articulo(art_id,art_nombre,art_pre_costo,art_pre_venta,art_stock)
+values(2,'refrigeradora',3400,4500,100);
+go
+
+select * from maestros.articulo;
+go
+
+SET IDENTITY_INSERT maestros.articulo OFF;  
+GO 
