@@ -1,0 +1,26 @@
+
+SELECT @@TRANCOUNT;
+GO
+
+BEGIN TRAN;
+GO
+
+SELECT @@TRANCOUNT;
+GO
+
+DELETE FROM dbo.empleado;
+GO
+
+SELECT * FROM dbo.empleado;
+GO
+
+ROLLBACK;
+GO
+
+SELECT @@TRANCOUNT;
+GO
+
+SELECT * FROM dbo.empleado;
+GO
+
+
