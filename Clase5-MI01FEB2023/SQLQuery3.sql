@@ -66,6 +66,54 @@ Base de datos RH.
 */
 
 
+select 
+	idempleado, apellido, 
+	nombre, sueldo, comision,
+	sueldo + COALESCE(comision,0) [ingreso total]
+from rh..empleado
+where sueldo + COALESCE(comision,0) < 8000;
+go
+
+
+/*
+Problema 21. 
+Desarrollar una sentencia SELECT para consultar los empleados 
+que ingresaron a la empresa un mes de enero. 
+Base de datos RH.
+*/
+
+select * from rh..empleado
+where MONTH(fecingreso) = 1;
+
+select * from rh..empleado
+where DATEPART(month,fecingreso) = 1;
+
+select * from rh..empleado
+where DATEPART(mm,fecingreso) = 1;
+
+/*
+Problema 22. 
+Desarrollar una sentencia SELECT para consultar 
+las matrículas del último mes. 
+Base de datos EDUCA.
+*/
+
+-- Ultimos 30 dias
+
+select * from EDUCA..MATRICULA
+where mat_fecha >= DATEADD(day,-30,getdate());
+go
+
+
+-- El mes actual
+
+
+-- El mes anterior al actual
+
+
+-- El mes de ultima matricula
+
+
 
 
 
