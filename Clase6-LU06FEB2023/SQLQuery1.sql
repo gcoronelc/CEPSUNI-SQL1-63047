@@ -40,10 +40,21 @@ order by planilla desc;
 go
 
 -- Edward: Funcion: Max
--- Elizabeth: 
--- Isabel: Aplicar Having
--- Richard: Having con Max
--- Piero: 
--- Lucia: 
--- Karla: 
+-- Aplicando CTE
+
+with 
+v1 as (
+	select 
+		idcargo cargo,
+		sum(sueldo) planilla
+	from RH..empleado 
+	group by idcargo ),
+v2 as (select max(planilla) valor_maximo from v1)
+select v1.* 
+from v1 join v2 
+on v1.planilla=v2.valor_maximo;
+go
+
+
+
 
