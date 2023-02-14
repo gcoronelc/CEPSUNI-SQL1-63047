@@ -54,6 +54,19 @@ select count(1) from rh..empleado;
 go
 
 
+select * from rh..ubicacion;
+select * from rh..cargo;
+go
+
+select * 
+from rh..ubicacion cross join rh..cargo;
+go
+
+
+select e.idempleado, e.nombre, j.nombre jefe
+from rh..empleado e
+join rh..empleado j on e.jefe = j.idempleado;
+go
 
 
 
