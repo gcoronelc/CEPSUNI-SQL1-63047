@@ -12,3 +12,9 @@ ORDER BY MAT_NOTA DESC;
 SELECT TOP 1 WITH TIES * 
 FROM EDUCA..MATRICULA
 ORDER BY MAT_NOTA DESC;
+
+
+select distinct iddepartamento
+from rh..empleado
+order by 1;
+
