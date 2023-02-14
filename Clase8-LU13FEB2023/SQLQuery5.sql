@@ -37,14 +37,23 @@ group by NomCurso;
 go
 
 
+-- Completando la solucion
+
 with
 data as (
 	select c.NomCurso, m.IdAlumno, m.Promedio 
 	from dbo.Matricula M 
 	join dbo.CursoProgramado cp on m.IdCursoProg = cp.IdCursoProg
 	join dbo.Curso c on cp.IdCurso = c.IdCurso
+),
+mejor as (
+	select NomCurso, MAX(promedio) mejor_promedio
+	from data
+	group by NomCurso
 )
-select NomCurso, MAX(promedio) mejor_promedio
-from data
-group by NomCurso;
+select data.NomCurso, a.ApeAlumno, a.NomAlumno, data.Promedio
+from data 
+join mejor on data.NomCurso = mejor.NomCurso and data.Promedio = mejor.mejor_promedio
+join Alumno a on data.IdAlumno = a.IdAlumno
+order by 1,2;
 go
